@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+
+ Copyright 2014 Julián Zaragoza 
+ 
+ This file is part of BN: Battery Notification
+ 
+ BN: Battery Notification is free software; you can redistribute it and/or modify it under the terms of the GNU 
+ General Public License as published by the Free Software Foundation; either version 2 of the
+ License, or (at your option) any later version. This program is distributed in the hope that it will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY 
+ or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. 
+ You should have received a copy of the GNU General Public License along with this program; if not, 
+ write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+ 
+ -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="options"
+        android:title="@string/options" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/autostart"
+            android:summary="@string/start_desc"
+            android:title="@string/start" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/screenon"
+            android:summary="@string/screen_on_desc"
+            android:title="@string/screen_on" />
+
+        <ListPreference
+            android:entries="@array/updateInterval"
+            android:entryValues="@array/updateIntervalValues"
+            android:key="@string/updates_interval"
+            android:summary="@string/update_desc"
+            android:title="@string/update" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
